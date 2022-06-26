@@ -1,4 +1,3 @@
-
 # 二、线性结构
 
 ## 2.1 数组`Array`
@@ -54,6 +53,7 @@
 > A：6 5进栈，5出栈，4进栈出栈，3进栈出栈，6出栈，2 1进栈，1 2出栈    
 > B：6 5 4 进栈，4 5出栈，3进栈出栈，2进栈出栈，1进栈出栈，6出栈    
 > D：6 5 4 3 2进栈，2 3 4出栈，1进栈出栈，5 6出栈    
+
 
 ### 2.2.2 栈结构封装
 
@@ -193,7 +193,7 @@ queue.size();
 queue.toString();
 ```
 基于链表实现
-### 
+
 ### 2.3.4 队列常见的操作
 
 - `enqueue(element)`:向队列尾部添加一个（或多个）新的项.
@@ -202,7 +202,7 @@ queue.toString();
 - `isEmpty()`:若队列为空，返回true，否则，返回false.
 - `size()`:返回队列包含的元素个数.
 - `toString()`:将队列中的内容，转为字符串形式.
-### 
+
 ### 2.3.5 队列的应用
 
 > 使用队列实现小游戏：击鼓传花，传入一组数据和设定的的数字num，循环遍历数组内元素，遍历到的元素为制定数字num时将该元素删除，直至数组剩下一个元素。
@@ -229,8 +229,8 @@ let passGame = (nameList, num) => {
 let names = ['aiba', 'ohno', 'nino', 'sho', 'mj']
 console.log(passGame(names, 3))
 ```
-结果展示<br />![结果展示](./images/1656169397329-3077fd5a-48c9-42b3-9f42-484f3ecace49.png)
-### 
+结果展示<br />![-16a1c9946c103abb.png](https://cdn.nlark.com/yuque/0/2022/png/25602002/1656169397329-3077fd5a-48c9-42b3-9f42-484f3ecace49.png#crop=0&crop=0&crop=1&crop=1&from=url&height=396&id=gwIYB&margin=%5Bobject%20Object%5D&name=-16a1c9946c103abb.png&originHeight=778&originWidth=1140&originalType=binary&ratio=1&rotation=0&showTitle=false&size=149496&status=done&style=none&title=&width=580)
+
 ### 2.3.6 优先队列
 
 优先队列主要考虑的问题为：
@@ -314,4 +314,530 @@ console.log(pq)
    - 栈：stack.push()方法，执行push（0），push（1），push（2），其数组的顺序为［0,1,2］，但是索引为2的元素其实是栈顶元素；所以栈的push方法是向栈顶添加元素（但在数组的视角下，为向数组尾部添加元素）
    - 队列：queue.enqueue()方法，其实是由数组的push()方法实现，相当于在数组头部增加元素
 
-## 2.4 链表`Linked List`
+## 2.4 单向链表`Linked List`
+
+### 2.4.1 单向链表的优势
+
+- 要存储多个元素，另外一个选择就是链表   
+- 但不同于数组，链表中的元素在内存中不必是连续的空间   
+- 链表的每个元素由一个存储元素本身的节点和一个指向下一个元素的引用（指针）组成   
+- 相对于数组，链表有一些**优点**：
+   - 内存空间不必是连续的，可以充分利用计算机的内存，实现灵活的内存动态管理
+   - 链表不必在创建时就确定大小，并且大小可以无限的延伸下去
+   - 链表在插入和删除数据时，时间复杂度可以达到O(1)，相对数组效率高很多
+- 相对于数组，链表有一些_**缺点**_：
+   - 链表访问任何一个位置的元素时，都需要从头开始访问（无法跳过第一个元素访问任何一个元素）
+   - 无法通过下标直接访问元素，需要从头一个个访问，直到找到对应的元素
+
+### 2.4.2 单向链表的结构
+
+![1ec25d48c58968aa.png](https://cdn.nlark.com/yuque/0/2022/png/25602002/1656208484117-b6e8fddc-a2e4-4379-9c7b-2bba2f9ac7df.png#crop=0&crop=0&crop=1&crop=1&from=url&id=mpplv&margin=%5Bobject%20Object%5D&name=1ec25d48c58968aa.png&originHeight=173&originWidth=803&originalType=binary&ratio=1&rotation=0&showTitle=false&size=36703&status=done&style=none&title=)
+
+- head属性指向链表的第一个节点
+- 链表的最后一个节点指向null
+- 当链表中一个节点也没有的时候，head直接指向null
+
+### 2.4.3 链表中的常见操作
+
+- `append(element)`:向链表尾部添加一个新的项
+- `insert(position,element)`:向链表的特定位置插入一个新的项
+- `get(position)`:获取对应位置的元素
+- `indexOf(element)`:返回元素在链表中的索引，若没有该元素则返回－1
+- `update(position,element)`:修改某个位置的元素
+- `removeAt(positin)`:从链表的特定位置移除一项
+- `remove(element)`:从链表中移除一项
+- `isEmpty()`:若链表无任何元素，则返回true，否则返回false
+- `size()`:返回链表包含的元素个数
+- `toString()`:由于链表使用了Node类，就需要重写继承自JS对象默认的tosString方法，让其只输出元素的值
+
+### 2.4.5 封装单向链表类
+
+1. 创建单项列表类
+
+代码实现：
+
+```javascript
+function LinkedList() {
+  //Node类的封装
+  function Node(data){
+    this.data = data
+    this.next =  null
+  }
+  //属性
+  //属性head指向链表的第一个值
+  this.head = null
+  this.length = 0
+}
+```
+
+2. append(element)
+- 代码实现：
+
+```javascript
+LinkedList.prototype.append = (data) => {
+  let newNode  =new Node(data)
+  //添加新节点
+  //情况一：链表中没有节点时
+  if(this.length === 0){
+    this.head = newNode
+  }
+  //情况二：链表中有节点时
+  else {
+    //
+    let current = this.head
+    //只要某个节点的next不为空，就一直向后找，相当于找到最后一个节点，因为最后一个节点的next为null
+    //节点的next永远指向下一个节点（data，next）
+    while(current.next){
+      current = current.next
+    }
+    //让最后一个节点的next指向新添加的节点（data，next）
+    current.next = newNode
+  }
+  this.length += 1
+}
+```
+
+- 过程详解：
+
+首先让current指向第一个节点：
+
+![-75688b3f086b7864.png](https://cdn.nlark.com/yuque/0/2022/png/25602002/1656213043974-779148ab-43ec-4ccc-ade6-0b9ca152778d.png#crop=0&crop=0&crop=1&crop=1&from=url&id=RnytN&margin=%5Bobject%20Object%5D&name=-75688b3f086b7864.png&originHeight=161&originWidth=502&originalType=binary&ratio=1&rotation=0&showTitle=false&size=24141&status=done&style=none&title=)
+
+通过while循环使current指向最后一个节点，最后通过`current.next = newNode`，让最后一个节点指向新节点newNode
+
+![-5251bed7e5d03aa9.png](https://cdn.nlark.com/yuque/0/2022/png/25602002/1656213085362-7cb62775-f7dc-4b8a-ac3c-b05692848661.png#crop=0&crop=0&crop=1&crop=1&from=url&id=KD6bv&margin=%5Bobject%20Object%5D&name=-5251bed7e5d03aa9.png&originHeight=168&originWidth=504&originalType=binary&ratio=1&rotation=0&showTitle=false&size=25669&status=done&style=none&title=)
+
+- 测试代码：
+
+```javascript
+let linkedlist = new LinkedList()
+linkedlist.append('123')
+linkedlist.append('nino')
+linkedlist.append('rxl')
+console.log(linkedlist)
+```
+
+- 测试结果：
+
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/25602002/1656213724720-e4e825ed-9498-42b9-bb63-3d3daef2ad7b.png#clientId=u8a519891-6f44-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=337&id=ud4e0ab76&margin=%5Bobject%20Object%5D&name=image.png&originHeight=345&originWidth=479&originalType=binary&ratio=1&rotation=0&showTitle=false&size=21039&status=done&style=none&taskId=u65537875-602e-4b99-8c82-4ea98e5e8c8&title=&width=467.5)
+
+3. toString()
+
+代码实现：
+
+```javascript
+LinkedList.prototype.toString = () => {
+  let current = this.head
+  let listStr = ''
+  while(current){
+    listStr += current.data + ''
+    current = current.next
+  }
+  return listStr
+}
+```
+
+测试结果：
+
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/25602002/1656214502656-c4dfbefe-7c96-402c-bd93-4860a9265252.png#clientId=u8a519891-6f44-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=380&id=u76d939b9&margin=%5Bobject%20Object%5D&name=image.png&originHeight=383&originWidth=426&originalType=binary&ratio=1&rotation=0&showTitle=false&size=22046&status=done&style=none&taskId=ub00d8498-6a0c-4271-a978-29a4f8b9623&title=&width=423)
+
+4. insert(position,element)
+
+代码实现：  
+
+```javascript
+LinkedList.prototype.insert = (position,data) => {
+//理解position的含义：
+//position=0:表示新节点插入后要成为第一个节点
+//position=2:表示新节点插入后要成为第三个节点
+  //对position进行越界判断：要求传入的position不能是负数且不能超过linkedlist的length
+  if(position < 0 || position > this.length){
+    return false
+  }
+  let newNode = new Node(data)
+  //情况1：position＝0
+  if(position === 0){
+    //让新节点指向当前列表的第一个节点
+    newNode.next = this.head
+    //让head指向新节点，成为新的第一个节点
+    this.head = newNode
+  }
+  //情况2:position>0 ＆＆ position<this.length
+  else {
+    let index = 0
+    let previous = null
+    let current = this.head
+    //通过while循环，使current指向当前索引为position的节点
+    while(index++ < position){
+      previous = current
+      current = current.next
+    }
+    newNode.next = current
+    previous.next = newNode
+  }
+  //
+  this.length += 1
+  return true
+}
+```
+
+过程详解：  <br />insert方法实现的过程中，根据插入节点位置的不同可分为多个情况：    
+
+- 情况1：position ＝ 0    
+
+通过`newNode.next = this.head`，建立连接1   <br />通过`this.head = newNode`，建立连接2   
+
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/25602002/1656217359210-08e4390e-5d84-426e-86df-4e6d81586121.png#clientId=u8a519891-6f44-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=188&id=uf627f009&margin=%5Bobject%20Object%5D&name=image.png&originHeight=190&originWidth=394&originalType=binary&ratio=1&rotation=0&showTitle=false&size=27495&status=done&style=none&taskId=ud0d49827-1985-40e2-a16a-1add1aa82d7&title=&width=389)
+
+- 情况2：position ＝ 0    
+
+首先定义两个变量previous和current分别指向需要插入位置`pos=x`的前一个节点和后一个节点     <br />然后，通过`newNode.next=current`，改变指向1   <br />最后，通过`previous.next=newNode`，改变指向2    
+
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/25602002/1656217417061-592013d8-ca56-49bb-b9dc-294d128c5708.png#clientId=u8a519891-6f44-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=181&id=u72dbf539&margin=%5Bobject%20Object%5D&name=image.png&originHeight=138&originWidth=303&originalType=binary&ratio=1&rotation=0&showTitle=false&size=17980&status=done&style=none&taskId=u408e5c3e-29c4-44ca-ad1d-4e3559980ea&title=&width=398.5)<br />![image.png](https://cdn.nlark.com/yuque/0/2022/png/25602002/1656217443890-75e684c8-f769-4541-80fb-c38fbc96d38b.png#clientId=u8a519891-6f44-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=169&id=u3baa82d6&margin=%5Bobject%20Object%5D&name=image.png&originHeight=136&originWidth=322&originalType=binary&ratio=1&rotation=0&showTitle=false&size=19533&status=done&style=none&taskId=u5150b2ee-7316-4d6f-9ca9-fe2e177f499&title=&width=401)
+
+测试代码：
+
+```javascript
+linkedlist.insert(0,"在链表最前面插入节点")
+linkedlist.insert(2,"在链表中第二个节点后插入节点")
+linkedlist.insert(5,"在链表最后插入节点")
+console.log(linkedlist)
+```
+
+测试结果：
+
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/25602002/1656217278763-87e525f0-6bfe-4450-97eb-d606b255ccfb.png#clientId=u8a519891-6f44-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=458&id=ua657f9b7&margin=%5Bobject%20Object%5D&name=image.png&originHeight=634&originWidth=568&originalType=binary&ratio=1&rotation=0&showTitle=false&size=53356&status=done&style=none&taskId=u550889c0-789d-4fcc-949f-f80f5c0ea8d&title=&width=410)
+
+5. get(position)
+
+代码实现：
+
+```javascript
+LinkedList.prototype.get = (position) => {
+  //
+  if(position < 0 || position > this.length){
+    return null
+  }
+  let current = this.head
+  let index = 0
+  while(index++ < position){
+    current = current.next
+  }
+    return current.data
+}
+```
+
+测试代码：
+```javascript
+console.log(linkedlist.get(0))
+console.log(linkedlist.get(2))
+```
+
+测试结果：
+
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/25602002/1656220716104-a4e2d680-daa3-4cfa-82ab-21ea68572bfd.png#clientId=u8a519891-6f44-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=182&id=ud98486d8&margin=%5Bobject%20Object%5D&name=image.png&originHeight=186&originWidth=435&originalType=binary&ratio=1&rotation=0&showTitle=false&size=16838&status=done&style=none&taskId=ua9c88072-e9ec-4007-a849-04bb63d4393&title=&width=425.5)
+
+6. indexOf(element)
+
+代码实现：
+```javascript
+LinkedList.prototype.indexOf = data => {
+  let current = this.head
+  let index = 0
+  while(current){
+    if(current.data === data){
+      return index
+    }
+    current = current.next
+    index += 1
+  }
+  return -1
+}
+```
+
+测试代码：
+```javascript
+console.log(linkedlist.indexOf("nino"))
+console.log(linkedlist.indexOf("rxl"))
+```
+
+测试结果：
+
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/25602002/1656221154069-81f6a3a9-e811-4592-bf62-786b1baa5543.png#clientId=uee96129e-b0d0-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=227&id=u77d5f7b8&margin=%5Bobject%20Object%5D&name=image.png&originHeight=234&originWidth=460&originalType=binary&ratio=1&rotation=0&showTitle=false&size=16676&status=done&style=none&taskId=ua824f838-fe17-438f-abe6-5797cbdeb1b&title=&width=446)
+
+7. update(position,element)
+
+代码实现：
+```javascript
+LinkedList.prototype.update = (position,newData) => {
+  if(position <0 || position > this.length){
+    return false
+  }
+  let current = this.head
+  let index = 0
+  while(index++ < position){
+    current = curretn.next
+  }
+  current.data = newData
+  return true
+}
+```
+
+测试代码：
+```javascript
+linkedlist.update(0,"ohno")
+console.log(linkedlist)
+```
+
+测试结果：
+
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/25602002/1656221777112-8a4c6dba-53df-4e79-94d7-516c082342cb.png#clientId=ua7719dd8-56aa-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=463&id=u0a2c6938&margin=%5Bobject%20Object%5D&name=image.png&originHeight=569&originWidth=602&originalType=binary&ratio=1&rotation=0&showTitle=false&size=43867&status=done&style=none&taskId=u987f8fb9-e86e-40f0-a4b5-f08d9436c5d&title=&width=490)
+
+8. removeAt(position)
+
+代码实现：
+```javascript
+//7、removeAt（position）
+LinkedList.prototype.removeAt = (position) => {
+  if (position < 0 || position > this.length) {
+    return null
+  }
+  let current = this.head
+  if (position == 0) {
+    this.head = this.head.next
+  }
+  else {
+    let index = 0
+    let previous = null
+    while (index++ < position) {
+      previous = current
+      current = current.next
+    }
+    previous.next = current.next
+  }
+  this.length -= 1
+  return current.data
+}
+```
+
+测试代码：
+```javascript
+linkedlist.removeAt(0)
+linkedlist.removeAt(2)
+console.log(linkedlist)
+```
+
+测试结果：
+
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/25602002/1656222711311-ac1b087c-8037-448f-8b0b-f8be1041e488.png#clientId=uf109e92d-0872-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=452&id=u853bc2b3&margin=%5Bobject%20Object%5D&name=image.png&originHeight=462&originWidth=479&originalType=binary&ratio=1&rotation=0&showTitle=false&size=36625&status=done&style=none&taskId=u8d1cb95e-cf49-43fd-bd27-03e0b134035&title=&width=468.5)
+
+9. 其他方法
+
+其他方法包括：`remove()、isEmpty()、size() `<br />代码实现：
+```javascript
+//8、remove（element）
+LinkedList.prototype.remove = (data) => {
+  let position = this.indexOf(data)
+  return this.removeAt(position)
+}
+//9、isEmpty（）
+LinkedList.prototype.isEmpty = () => {
+  return this.length === 0
+}
+//10、size（）
+LinkedList.prototype.size = () => {
+  return this.length
+}
+```
+
+测试代码：
+```javascript
+linkedlist.remove("123")
+console.log(linkedlist)
+console.log(linkedlist.isEmpty())
+console.log(linkedlist.size())
+```
+
+测试结果：
+
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/25602002/1656222916425-ab7e2d5c-e161-4b1f-a1ef-c662d69efad8.png#clientId=uf109e92d-0872-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=155&id=uc007c3e3&margin=%5Bobject%20Object%5D&name=image.png&originHeight=284&originWidth=1308&originalType=binary&ratio=1&rotation=0&showTitle=false&size=71076&status=done&style=none&taskId=uda28a562-fcf9-404b-94b4-6ec0dfa638b&title=&width=712)
+
+### 2.4.6 完整实现
+```javascript
+//封装链表类
+function LinkedList() {
+  //封装一个内部类，节点类
+  function Node(data) {
+    this.data = data
+    this.next = null
+  }
+  //属性
+  //属性head指向链表的第一个节点
+  this.head = null
+  this.length = 0
+  //1、append（element）
+  LinkedList.prototype.append = (data) => {
+    let newNode = new Node(data)
+    //添加新节点
+    //情况一：链表中没有节点时
+    if (this.length === 0) {
+      this.head = newNode
+    }
+    //情况二：链表中有节点时
+    else {
+      //
+      let current = this.head
+      //只要某个节点的next不为空，就一直向后找，相当于找到最后一个节点，因为最后一个节点的next为null
+      //节点的next永远指向下一个节点（data，next）
+      while (current.next) {
+        current = current.next
+      }
+      //让最后一个节点的next指向新添加的节点（data，next）
+      current.next = newNode
+    }
+    this.length += 1
+  }
+  //2、toString（）
+  LinkedList.prototype.toString = () => {
+    let current = this.head
+    let listStr = ''
+    while (current) {
+      listStr += current.data + ''
+      current = current.next
+    }
+    return listStr
+  }
+  //3、insert（position，element）
+  LinkedList.prototype.insert = (position, data) => {
+    //理解position的含义：
+    //position=0:表示新节点插入后要成为第一个节点
+    //position=2:表示新节点插入后要成为第三个节点
+    //对position进行越界判断：要求传入的position不能是负数且不能超过linkedlist的length
+    if (position < 0 || position > this.length) {
+      return false
+    }
+    let newNode = new Node(data)
+    //情况1：position＝0
+    if (position === 0) {
+      //让新节点指向当前列表的第一个节点
+      newNode.next = this.head
+      //让head指向新节点，成为新的第一个节点
+      this.head = newNode
+    }
+    //情况2:position>0 ＆＆ position<this.length
+    else {
+      let index = 0
+      let previous = null
+      let current = this.head
+      //通过while循环，使current指向当前索引为position的节点
+      while (index++ < position) {
+        previous = current
+        current = current.next
+      }
+      newNode.next = current
+      previous.next = newNode
+    }
+    //
+    this.length += 1
+    return true
+  }
+  //4、get（position）
+  LinkedList.prototype.get = (position) => {
+    //
+    if (position < 0 || position > this.length) {
+      return null
+    }
+    let current = this.head
+    let index = 0
+    while (index++ < position) {
+      current = current.next
+    }
+    return current.data
+  }
+  //5、indexOf（element）
+  LinkedList.prototype.indexOf = data => {
+    let current = this.head
+    let index = 0
+    while (current) {
+      if (current.data === data) {
+        return index
+      }
+      current = current.next
+      index += 1
+    }
+    return -1
+  }
+  //6、update（position，element）
+  LinkedList.prototype.update = (position, newData) => {
+    if (position < 0 || position > this.length) {
+      return false
+    }
+    let current = this.head
+    let index = 0
+    while (index++ < position) {
+      current = curretn.next
+    }
+    current.data = newData
+    return true
+  }
+  //7、removeAt（position）
+  LinkedList.prototype.removeAt = (position) => {
+    if (position < 0 || position > this.length) {
+      return null
+    }
+    let current = this.head
+    if (position == 0) {
+      this.head = this.head.next
+    }
+    else {
+      let index = 0
+      let previous = null
+      while (index++ < position) {
+        previous = current
+        current = current.next
+      }
+      previous.next = current.next
+    }
+    this.length -= 1
+    return current.data
+  }
+  //8、remove（element）
+  LinkedList.prototype.remove = (data) => {
+    let position = this.indexOf(data)
+    return this.removeAt(position)
+  }
+  //9、isEmpty（）
+  LinkedList.prototype.isEmpty = () => {
+    return this.length === 0
+  }
+  //10、size（）
+  LinkedList.prototype.size = () => {
+    return this.length
+  }
+}
+let linkedlist = new LinkedList()
+linkedlist.append('123')
+linkedlist.append('nino')
+linkedlist.append('rxl')
+console.log(linkedlist)
+console.log(linkedlist.toString())
+linkedlist.insert(0, "在链表最前面插入节点")
+linkedlist.insert(2, "在链表中第二个节点后插入节点")
+linkedlist.insert(5, "在链表最后插入节点")
+console.log(linkedlist)
+console.log(linkedlist.get(0))
+console.log(linkedlist.get(2))
+console.log(linkedlist.indexOf("nino"))
+console.log(linkedlist.indexOf("rxl"))
+linkedlist.update(0, "ohno")
+console.log(linkedlist)
+linkedlist.removeAt(0)
+linkedlist.removeAt(2)
+console.log(linkedlist)
+linkedlist.remove("123")
+console.log(linkedlist)
+console.log(linkedlist.isEmpty())
+console.log(linkedlist.size(2))
+```
+
+## 2.5 双向链表`Linked List`
