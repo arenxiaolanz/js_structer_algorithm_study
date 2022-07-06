@@ -229,7 +229,7 @@ let passGame = (nameList, num) => {
 let names = ['aiba', 'ohno', 'nino', 'sho', 'mj']
 console.log(passGame(names, 3))
 ```
-结果展示<br />![-16a1c9946c103abb.png](https://cdn.nlark.com/yuque/0/2022/png/25602002/1656169397329-3077fd5a-48c9-42b3-9f42-484f3ecace49.png#crop=0&crop=0&crop=1&crop=1&from=url&height=396&id=gwIYB&margin=%5Bobject%20Object%5D&name=-16a1c9946c103abb.png&originHeight=778&originWidth=1140&originalType=binary&ratio=1&rotation=0&showTitle=false&size=149496&status=done&style=none&title=&width=580)
+结果展示<br />![-16a1c9946c103abb.png](https://cdn.nlark.com/yuque/0/2022/png/25602002/1656169397329-3077fd5a-48c9-42b3-9f42-484f3ecace49.png#crop=0&crop=0&crop=1&crop=1&from=url&height=396&id=cx1DJ&margin=%5Bobject%20Object%5D&name=-16a1c9946c103abb.png&originHeight=778&originWidth=1140&originalType=binary&ratio=1&rotation=0&showTitle=false&size=149496&status=done&style=none&title=&width=580)
 
 ### 2.3.6 优先队列
 
@@ -302,7 +302,7 @@ pq.enqueue('ren', 418)
 pq.enqueue('money', 999)
 console.log(pq)
 ```
-测试结果<br />![image.png](https://cdn.nlark.com/yuque/0/2022/png/25602002/1656173605937-b9c4b6bb-d597-4ae6-b3a3-8ef9214831cb.png#clientId=u27c3d88f-f1b9-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=211&id=u0010ac11&margin=%5Bobject%20Object%5D&name=image.png&originHeight=421&originWidth=1506&originalType=binary&ratio=1&rotation=0&showTitle=false&size=107826&status=done&style=none&taskId=ub421f5e6-47e3-42e9-9beb-2c7d822febf&title=&width=755)
+测试结果<br />![image.png](https://cdn.nlark.com/yuque/0/2022/png/25602002/1656173605937-b9c4b6bb-d597-4ae6-b3a3-8ef9214831cb.png#clientId=u27c3d88f-f1b9-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=211&id=R0rmE&margin=%5Bobject%20Object%5D&name=image.png&originHeight=421&originWidth=1506&originalType=binary&ratio=1&rotation=0&showTitle=false&size=107826&status=done&style=none&taskId=ub421f5e6-47e3-42e9-9beb-2c7d822febf&title=&width=755)
 
 #### 2.3.6.2 注意点
 
@@ -331,7 +331,7 @@ console.log(pq)
 
 ### 2.4.2 单向链表的结构
 
-![1ec25d48c58968aa.png](https://cdn.nlark.com/yuque/0/2022/png/25602002/1656208484117-b6e8fddc-a2e4-4379-9c7b-2bba2f9ac7df.png#crop=0&crop=0&crop=1&crop=1&from=url&id=mpplv&margin=%5Bobject%20Object%5D&name=1ec25d48c58968aa.png&originHeight=173&originWidth=803&originalType=binary&ratio=1&rotation=0&showTitle=false&size=36703&status=done&style=none&title=)
+![1ec25d48c58968aa.png](https://cdn.nlark.com/yuque/0/2022/png/25602002/1656208484117-b6e8fddc-a2e4-4379-9c7b-2bba2f9ac7df.png#crop=0&crop=0&crop=1&crop=1&from=url&id=ONy5W&margin=%5Bobject%20Object%5D&name=1ec25d48c58968aa.png&originHeight=173&originWidth=803&originalType=binary&ratio=1&rotation=0&showTitle=false&size=36703&status=done&style=none&title=)
 
 - head属性指向链表的第一个节点
 - 链表的最后一个节点指向null
@@ -401,11 +401,11 @@ LinkedList.prototype.append = (data) => {
 
 首先让current指向第一个节点：
 
-![-75688b3f086b7864.png](https://cdn.nlark.com/yuque/0/2022/png/25602002/1656213043974-779148ab-43ec-4ccc-ade6-0b9ca152778d.png#crop=0&crop=0&crop=1&crop=1&from=url&id=RnytN&margin=%5Bobject%20Object%5D&name=-75688b3f086b7864.png&originHeight=161&originWidth=502&originalType=binary&ratio=1&rotation=0&showTitle=false&size=24141&status=done&style=none&title=)
+![-75688b3f086b7864.png](https://cdn.nlark.com/yuque/0/2022/png/25602002/1656213043974-779148ab-43ec-4ccc-ade6-0b9ca152778d.png#crop=0&crop=0&crop=1&crop=1&from=url&id=d7euB&margin=%5Bobject%20Object%5D&name=-75688b3f086b7864.png&originHeight=161&originWidth=502&originalType=binary&ratio=1&rotation=0&showTitle=false&size=24141&status=done&style=none&title=)
 
 通过while循环使current指向最后一个节点，最后通过`current.next = newNode`，让最后一个节点指向新节点newNode
 
-![-5251bed7e5d03aa9.png](https://cdn.nlark.com/yuque/0/2022/png/25602002/1656213085362-7cb62775-f7dc-4b8a-ac3c-b05692848661.png#crop=0&crop=0&crop=1&crop=1&from=url&id=KD6bv&margin=%5Bobject%20Object%5D&name=-5251bed7e5d03aa9.png&originHeight=168&originWidth=504&originalType=binary&ratio=1&rotation=0&showTitle=false&size=25669&status=done&style=none&title=)
+![-5251bed7e5d03aa9.png](https://cdn.nlark.com/yuque/0/2022/png/25602002/1656213085362-7cb62775-f7dc-4b8a-ac3c-b05692848661.png#crop=0&crop=0&crop=1&crop=1&from=url&id=pEaKq&margin=%5Bobject%20Object%5D&name=-5251bed7e5d03aa9.png&originHeight=168&originWidth=504&originalType=binary&ratio=1&rotation=0&showTitle=false&size=25669&status=done&style=none&title=)
 
 - 测试代码：
 
@@ -419,7 +419,7 @@ console.log(linkedlist)
 
 - 测试结果：
 
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/25602002/1656213724720-e4e825ed-9498-42b9-bb63-3d3daef2ad7b.png#clientId=u8a519891-6f44-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=337&id=ud4e0ab76&margin=%5Bobject%20Object%5D&name=image.png&originHeight=345&originWidth=479&originalType=binary&ratio=1&rotation=0&showTitle=false&size=21039&status=done&style=none&taskId=u65537875-602e-4b99-8c82-4ea98e5e8c8&title=&width=467.5)
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/25602002/1656213724720-e4e825ed-9498-42b9-bb63-3d3daef2ad7b.png#clientId=u8a519891-6f44-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=337&id=CpyyN&margin=%5Bobject%20Object%5D&name=image.png&originHeight=345&originWidth=479&originalType=binary&ratio=1&rotation=0&showTitle=false&size=21039&status=done&style=none&taskId=u65537875-602e-4b99-8c82-4ea98e5e8c8&title=&width=467.5)
 
 3. toString()
 
@@ -439,7 +439,7 @@ LinkedList.prototype.toString = () => {
 
 测试结果：
 
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/25602002/1656214502656-c4dfbefe-7c96-402c-bd93-4860a9265252.png#clientId=u8a519891-6f44-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=380&id=u76d939b9&margin=%5Bobject%20Object%5D&name=image.png&originHeight=383&originWidth=426&originalType=binary&ratio=1&rotation=0&showTitle=false&size=22046&status=done&style=none&taskId=ub00d8498-6a0c-4271-a978-29a4f8b9623&title=&width=423)
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/25602002/1656214502656-c4dfbefe-7c96-402c-bd93-4860a9265252.png#clientId=u8a519891-6f44-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=380&id=yV27u&margin=%5Bobject%20Object%5D&name=image.png&originHeight=383&originWidth=426&originalType=binary&ratio=1&rotation=0&showTitle=false&size=22046&status=done&style=none&taskId=ub00d8498-6a0c-4271-a978-29a4f8b9623&title=&width=423)
 
 4. insert(position,element)
 
@@ -487,13 +487,13 @@ LinkedList.prototype.insert = (position,data) => {
 
 通过`newNode.next = this.head`，建立连接1   <br />通过`this.head = newNode`，建立连接2   
 
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/25602002/1656217359210-08e4390e-5d84-426e-86df-4e6d81586121.png#clientId=u8a519891-6f44-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=188&id=uf627f009&margin=%5Bobject%20Object%5D&name=image.png&originHeight=190&originWidth=394&originalType=binary&ratio=1&rotation=0&showTitle=false&size=27495&status=done&style=none&taskId=ud0d49827-1985-40e2-a16a-1add1aa82d7&title=&width=389)
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/25602002/1656217359210-08e4390e-5d84-426e-86df-4e6d81586121.png#clientId=u8a519891-6f44-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=188&id=PHth0&margin=%5Bobject%20Object%5D&name=image.png&originHeight=190&originWidth=394&originalType=binary&ratio=1&rotation=0&showTitle=false&size=27495&status=done&style=none&taskId=ud0d49827-1985-40e2-a16a-1add1aa82d7&title=&width=389)
 
 - 情况2：position ＝ 0    
 
 首先定义两个变量previous和current分别指向需要插入位置`pos=x`的前一个节点和后一个节点     <br />然后，通过`newNode.next=current`，改变指向1   <br />最后，通过`previous.next=newNode`，改变指向2    
 
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/25602002/1656217417061-592013d8-ca56-49bb-b9dc-294d128c5708.png#clientId=u8a519891-6f44-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=181&id=u72dbf539&margin=%5Bobject%20Object%5D&name=image.png&originHeight=138&originWidth=303&originalType=binary&ratio=1&rotation=0&showTitle=false&size=17980&status=done&style=none&taskId=u408e5c3e-29c4-44ca-ad1d-4e3559980ea&title=&width=398.5)<br />![image.png](https://cdn.nlark.com/yuque/0/2022/png/25602002/1656217443890-75e684c8-f769-4541-80fb-c38fbc96d38b.png#clientId=u8a519891-6f44-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=169&id=u3baa82d6&margin=%5Bobject%20Object%5D&name=image.png&originHeight=136&originWidth=322&originalType=binary&ratio=1&rotation=0&showTitle=false&size=19533&status=done&style=none&taskId=u5150b2ee-7316-4d6f-9ca9-fe2e177f499&title=&width=401)
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/25602002/1656217417061-592013d8-ca56-49bb-b9dc-294d128c5708.png#clientId=u8a519891-6f44-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=181&id=QqxBU&margin=%5Bobject%20Object%5D&name=image.png&originHeight=138&originWidth=303&originalType=binary&ratio=1&rotation=0&showTitle=false&size=17980&status=done&style=none&taskId=u408e5c3e-29c4-44ca-ad1d-4e3559980ea&title=&width=398.5)<br />![image.png](https://cdn.nlark.com/yuque/0/2022/png/25602002/1656217443890-75e684c8-f769-4541-80fb-c38fbc96d38b.png#clientId=u8a519891-6f44-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=169&id=NCaF1&margin=%5Bobject%20Object%5D&name=image.png&originHeight=136&originWidth=322&originalType=binary&ratio=1&rotation=0&showTitle=false&size=19533&status=done&style=none&taskId=u5150b2ee-7316-4d6f-9ca9-fe2e177f499&title=&width=401)
 
 测试代码：
 
@@ -506,7 +506,7 @@ console.log(linkedlist)
 
 测试结果：
 
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/25602002/1656217278763-87e525f0-6bfe-4450-97eb-d606b255ccfb.png#clientId=u8a519891-6f44-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=458&id=ua657f9b7&margin=%5Bobject%20Object%5D&name=image.png&originHeight=634&originWidth=568&originalType=binary&ratio=1&rotation=0&showTitle=false&size=53356&status=done&style=none&taskId=u550889c0-789d-4fcc-949f-f80f5c0ea8d&title=&width=410)
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/25602002/1656217278763-87e525f0-6bfe-4450-97eb-d606b255ccfb.png#clientId=u8a519891-6f44-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=458&id=P1Tpy&margin=%5Bobject%20Object%5D&name=image.png&originHeight=634&originWidth=568&originalType=binary&ratio=1&rotation=0&showTitle=false&size=53356&status=done&style=none&taskId=u550889c0-789d-4fcc-949f-f80f5c0ea8d&title=&width=410)
 
 5. get(position)
 
@@ -535,7 +535,7 @@ console.log(linkedlist.get(2))
 
 测试结果：
 
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/25602002/1656220716104-a4e2d680-daa3-4cfa-82ab-21ea68572bfd.png#clientId=u8a519891-6f44-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=182&id=ud98486d8&margin=%5Bobject%20Object%5D&name=image.png&originHeight=186&originWidth=435&originalType=binary&ratio=1&rotation=0&showTitle=false&size=16838&status=done&style=none&taskId=ua9c88072-e9ec-4007-a849-04bb63d4393&title=&width=425.5)
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/25602002/1656220716104-a4e2d680-daa3-4cfa-82ab-21ea68572bfd.png#clientId=u8a519891-6f44-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=182&id=jayr2&margin=%5Bobject%20Object%5D&name=image.png&originHeight=186&originWidth=435&originalType=binary&ratio=1&rotation=0&showTitle=false&size=16838&status=done&style=none&taskId=ua9c88072-e9ec-4007-a849-04bb63d4393&title=&width=425.5)
 
 6. indexOf(element)
 
@@ -563,7 +563,7 @@ console.log(linkedlist.indexOf("rxl"))
 
 测试结果：
 
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/25602002/1656221154069-81f6a3a9-e811-4592-bf62-786b1baa5543.png#clientId=uee96129e-b0d0-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=227&id=u77d5f7b8&margin=%5Bobject%20Object%5D&name=image.png&originHeight=234&originWidth=460&originalType=binary&ratio=1&rotation=0&showTitle=false&size=16676&status=done&style=none&taskId=ua824f838-fe17-438f-abe6-5797cbdeb1b&title=&width=446)
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/25602002/1656221154069-81f6a3a9-e811-4592-bf62-786b1baa5543.png#clientId=uee96129e-b0d0-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=227&id=ThOvP&margin=%5Bobject%20Object%5D&name=image.png&originHeight=234&originWidth=460&originalType=binary&ratio=1&rotation=0&showTitle=false&size=16676&status=done&style=none&taskId=ua824f838-fe17-438f-abe6-5797cbdeb1b&title=&width=446)
 
 7. update(position,element)
 
@@ -591,7 +591,7 @@ console.log(linkedlist)
 
 测试结果：
 
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/25602002/1656221777112-8a4c6dba-53df-4e79-94d7-516c082342cb.png#clientId=ua7719dd8-56aa-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=463&id=u0a2c6938&margin=%5Bobject%20Object%5D&name=image.png&originHeight=569&originWidth=602&originalType=binary&ratio=1&rotation=0&showTitle=false&size=43867&status=done&style=none&taskId=u987f8fb9-e86e-40f0-a4b5-f08d9436c5d&title=&width=490)
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/25602002/1656221777112-8a4c6dba-53df-4e79-94d7-516c082342cb.png#clientId=ua7719dd8-56aa-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=463&id=sKsOM&margin=%5Bobject%20Object%5D&name=image.png&originHeight=569&originWidth=602&originalType=binary&ratio=1&rotation=0&showTitle=false&size=43867&status=done&style=none&taskId=u987f8fb9-e86e-40f0-a4b5-f08d9436c5d&title=&width=490)
 
 8. removeAt(position)
 
@@ -629,7 +629,7 @@ console.log(linkedlist)
 
 测试结果：
 
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/25602002/1656222711311-ac1b087c-8037-448f-8b0b-f8be1041e488.png#clientId=uf109e92d-0872-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=452&id=u853bc2b3&margin=%5Bobject%20Object%5D&name=image.png&originHeight=462&originWidth=479&originalType=binary&ratio=1&rotation=0&showTitle=false&size=36625&status=done&style=none&taskId=u8d1cb95e-cf49-43fd-bd27-03e0b134035&title=&width=468.5)
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/25602002/1656222711311-ac1b087c-8037-448f-8b0b-f8be1041e488.png#clientId=uf109e92d-0872-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=452&id=xalqg&margin=%5Bobject%20Object%5D&name=image.png&originHeight=462&originWidth=479&originalType=binary&ratio=1&rotation=0&showTitle=false&size=36625&status=done&style=none&taskId=u8d1cb95e-cf49-43fd-bd27-03e0b134035&title=&width=468.5)
 
 9. 其他方法
 
@@ -660,7 +660,7 @@ console.log(linkedlist.size())
 
 测试结果：
 
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/25602002/1656222916425-ab7e2d5c-e161-4b1f-a1ef-c662d69efad8.png#clientId=uf109e92d-0872-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=155&id=uc007c3e3&margin=%5Bobject%20Object%5D&name=image.png&originHeight=284&originWidth=1308&originalType=binary&ratio=1&rotation=0&showTitle=false&size=71076&status=done&style=none&taskId=uda28a562-fcf9-404b-94b4-6ec0dfa638b&title=&width=712)
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/25602002/1656222916425-ab7e2d5c-e161-4b1f-a1ef-c662d69efad8.png#clientId=uf109e92d-0872-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=155&id=XTIWi&margin=%5Bobject%20Object%5D&name=image.png&originHeight=284&originWidth=1308&originalType=binary&ratio=1&rotation=0&showTitle=false&size=71076&status=done&style=none&taskId=uda28a562-fcf9-404b-94b4-6ec0dfa638b&title=&width=712)
 
 ### 2.4.6 完整实现
 ```javascript
@@ -841,3 +841,676 @@ console.log(linkedlist.size(2))
 ```
 
 ## 2.5 双向链表`Linked List`
+
+### 2.5.1 双向链表简介
+
+- 既可以**从头遍历到尾，**又可以**从尾遍历到头**。
+- 也就是说链表相连的过程是双向的。
+- 其实现原理是：一个节点既有向前连接的引用，也有一个向后连接的引用。
+- 双向链表可以有效的解决单向链表中提到的问题。
+
+### 2.5.2 双向链表的缺点
+
+- 每次在插入或删除某个节点时，需要处理四个引用，而不是两个，也就是实现起来要困难一些
+- 相对于单向链表，所占内存空间更大一些
+- 但是，相对于双向链表的便利性而言，这些缺点微不足道
+
+### 2.5.3 双向链表的结构
+
+![7bb9a70ad3be0877.png](https://cdn.nlark.com/yuque/0/2022/png/25602002/1656899606014-96ad5fa7-54d7-4328-bf60-31b631b96b73.png#crop=0&crop=0&crop=1&crop=1&from=url&id=PaLNQ&margin=%5Bobject%20Object%5D&name=7bb9a70ad3be0877.png&originHeight=207&originWidth=1028&originalType=binary&ratio=1&rotation=0&showTitle=false&size=93510&status=done&style=none&title=)
+
+ 特点：
+
+- 双向链表不仅有**head**指针指向第一个节点，而且有**tail**指针指向最后一个节点
+- 每个节点有三部分组成：**item**储存数据，**prev**指向前一个节点，**next**指向后一个节点
+- 双向链表的一个节点的prev指向**null**
+- 双向链表的最后一个节点的next指向**null**
+
+### 2.5.4  双向链表常见的操作
+
+- `append(element)`:向链表尾部添加一个新的项
+- `inset(position,element)`:向链表的特定位置插入一个新的项
+- `get(element)`:获取对应位置的元素
+- `indexOf(element)`:返回元素在链表中的索引，若无则返回－1
+- `update(position,element)`:修改某个位置的元素
+- `removeAt(position)`:从链表的特定位置移除一项
+- `remove(element)`:从列表中移除一项
+- `isEmpty()`:如果链表中不含任何元素，返回true，否则返回false
+- `size()`:返回链表中元素个数
+- `toString()`:让其输出元素的值
+- `forwardString()`:返回正向遍历节点字符串形式
+- `backwordString()`:返回反向遍历的节点字符串形式
+
+### 2.5.5 封装双向链表类
+
+0.创建双向链表类
+```javascript
+//封装双向链表类
+function DoublyLinkedList(){
+//封装内部类，节点类
+  function Node(data){
+    this.data = data
+    this.prev = null
+    this.next = null
+  }
+//属性
+  this.head = null
+  this.tail = null
+  this.length = 0
+}
+```
+
+1. append(element)
+
+- 代码实现：
+```javascript
+DoublyLinkedList.prototype.append = data => {
+  let newNode = new Node(data)
+  if(this.length === 0){
+    this.tail = newNode
+    this.head = newNode
+  }
+  else{
+    newNode.prev = this.tail
+    this.tail.next = newNode
+    this.tail = newNode
+  }
+  this.length += 1
+}
+```
+
+- 过程详解：
+
+添加节点时分为多个情况：
+
+   - 情况1：添加的是第一个节点：只需要让head和tail都指向新节点即可
+   - 情况2：链表中已经存在数据
+      - 首先tail中的next之前指向的是null. 现在应该指向新的节点newNode: this.tail.next = newNode
+      - 因为是双向链表, 新节点的next/tail目前都是null. 但是作为最后一个节点, 需要有一个指向前一个节点的引用. 所以这里我们需要newNode.prev = this.tail
+      - 因为目前newNod已经变成了最后的节点, 所以this.tail属性的引用应该指向最后: this.tail = newNode即可
+
+- 测试代码：
+```javascript
+let list = new DoublyLinkedList()
+list.append('aaa')
+list.append('bbb')
+list.append('ccc')
+console.log(list)
+```
+
+- 测试结果
+
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/25602002/1656906490230-2f8c79ee-1dc0-4b08-ae4a-7f166cc749df.png#clientId=u6430b540-2302-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=338&id=Ktzg7&margin=%5Bobject%20Object%5D&name=image.png&originHeight=338&originWidth=493&originalType=binary&ratio=1&rotation=0&showTitle=false&size=24326&status=done&style=none&taskId=u660e8f19-e30d-47b4-a2f9-dab68962c9c&title=&width=493)
+
+2. toString()汇总
+
+- 代码实现：
+```javascript
+//toString
+DoublyLinkedList.prototype.toString = () => {
+  return this.backwardString()
+}
+//forwardString
+DoublyLinkedList.prototype.forwardString = () => {
+  let current = this.tail
+  let resultString = ""
+  while(current) {
+    resultString += current.data + '--'
+    current = current.prev
+  }
+  return resultString
+}
+//backwordString
+DoublyLinkedList.prototype.backwardString = () => {
+  let current = this.head
+  let resultString = ""
+  while(current){
+    resultString += current.data + "--"
+    current = current.next
+  }
+  return resultString
+}
+```
+
+- 过程详解：
+
+三种获取字符串的方法：toString（）、forwardString（）、backwardString（）实现原理相似，仅以backWardString方法为例：     <br />定义current变量记录当前指向的节点。首先让current指向第一个节点，然后通过 current = current.next 依次向后遍历。在while循环中以(current)作为条件遍历链表，只要current ！= null就一直遍历，由此可获取链表所有节点的数据。   
+
+- 测试代码：
+```javascript
+console.log(list.toString())
+console.log(list.backwardString())
+console.log(list.forwardString())
+```
+
+- 测试结果：
+
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/25602002/1656909701211-dfebed03-d6d0-46ec-823b-070e3965bad1.png#clientId=u6430b540-2302-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=99&id=TVFWP&margin=%5Bobject%20Object%5D&name=image.png&originHeight=99&originWidth=168&originalType=binary&ratio=1&rotation=0&showTitle=false&size=2377&status=done&style=none&taskId=u4265fa61-d3f8-4d3a-af81-03cf29d347b&title=&width=168)
+
+3.insert(position,element)
+
+- 代码实现：
+```javascript
+DoublyLinkedList.prototype.insert = (pos,data) => {
+  if(pos < 0 || pos > this.length ) return false
+  let newNode = new Node(data)
+  if(this.length === 0){
+    this.head = newNode
+    this.tail = newNode
+  }
+  else{
+    if(pos == 0) {
+      this.head.prev = newNode
+      newNode.next = this.head
+      this.head = newNode
+    }
+    else if(pos == this.length) {
+      this.tail.next = newNode
+      newNode.prev = this.tail
+      this.tail = newNode
+    }
+    else {
+      let current = this.head
+      let index = 0
+      while(index++ <pos) {
+        previous = current
+        current = current.next
+      }
+      newNode.next = current
+      newNode.prev = current.prev
+      previous.next = newNode
+      current.prev = newNode
+    }
+  }
+  this.length += 1
+  return true
+}
+```
+
+- 过程详解：
+
+当原列表为空时：
+
+   - 情况1：插入的新节点是链表的第一个节点；只需要让head和tail都指向newNode即可。    
+   - <br />
+
+当原列表不为空时：
+
+   - 情况1：当position == 0，即在链表的首部添加节点
+
+![-69cd21ee82bed75f.png](https://cdn.nlark.com/yuque/0/2022/png/25602002/1656911315023-ffafa9fa-45ac-4b61-b39c-1b8e349e8019.png#crop=0&crop=0&crop=1&crop=1&from=url&id=yhxwr&margin=%5Bobject%20Object%5D&name=-69cd21ee82bed75f.png&originHeight=243&originWidth=625&originalType=binary&ratio=1&rotation=0&showTitle=false&size=38665&status=done&style=none&title=)<br />首先，通过：this.head.prev = newNode，改变指向1； <br />然后，通过：newNode.next = this.head，改变指向2； <br />最后，通过：this.head = newNode，改变指向3； 
+
+   - 情况2：position == this.length，即在链表的尾部添加节点
+
+![-5eeda181674f5b32.jpg](https://cdn.nlark.com/yuque/0/2022/jpeg/25602002/1656911799463-ee33daed-bd69-472c-a6e7-213b876eddb5.jpeg#crop=0&crop=0&crop=1&crop=1&from=url&id=f96YY&margin=%5Bobject%20Object%5D&name=-5eeda181674f5b32.jpg&originHeight=337&originWidth=1024&originalType=binary&ratio=1&rotation=0&showTitle=false&size=31013&status=done&style=none&title=)
+
+首先，通过：this.tail.next = newNode，改变指向1；（注意这里使用this.tail指向原链表最后一个节点，而不是this.head。因为当length>1时，this.head != this.tail。）     <br />然后，通过：newNode.prev = this.tail，改变指向2；     <br />最后，通过：this.tail = newNode，改变指向3；     
+
+   - 情况3：将元素插入到中间位置
+
+![-574e7d1e4ad0e2b9.jpg](https://cdn.nlark.com/yuque/0/2022/jpeg/25602002/1656912094016-16fbd078-baed-462d-a2bf-ccdd08c7d96c.jpeg#crop=0&crop=0&crop=1&crop=1&from=url&id=wCo48&margin=%5Bobject%20Object%5D&name=-574e7d1e4ad0e2b9.jpg&originHeight=349&originWidth=1024&originalType=binary&ratio=1&rotation=0&showTitle=false&size=36656&status=done&style=none&title=)
+
+首先，需要定义变量current按照之前的思路，通过while循环找到position位置的后一个节点，循环结束后index = position    <br />当position = 1时，current就指向了Node2。这样操作current就等同于间接地操作Node2，还可以通过current.prev间接获取Node1。得到了newNode的前一个节点和后一个节点就可以通过改变它们的prev和next变量的指向来插入newNode了。      <br />通过：newNode.next = current，改变指向1；     <br />通过：newNode.prev = current.prev，改变指向2；     <br />通过：current.prev.next = newNode，改变指向3；    <br />注意必须最后才修改current.prev的指向，不然就无法通过current.prev获取需要操作的Node1了。     <br />通过：current.prev = current，改变指向4；      
+
+- 测试代码：
+```javascript
+list.insert(0, '插入链表的第一个元素')
+list.insert(0, '在链表首部插入元素')
+list.insert(1, '在链表中间插入元素')
+list.insert(6, '在链表尾部插入元素')
+console.log(list);
+```
+
+- 测试结果：
+
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/25602002/1656912448349-3da2097d-6d88-4536-9a7e-0afe32ef8e73.png#clientId=u6430b540-2302-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=539&id=uj2bV&margin=%5Bobject%20Object%5D&name=image.png&originHeight=539&originWidth=519&originalType=binary&ratio=1&rotation=0&showTitle=false&size=53688&status=done&style=none&taskId=u789f2c36-0366-4b7e-9d05-ba90a3dfe21&title=&width=519)<br />![image.png](https://cdn.nlark.com/yuque/0/2022/png/25602002/1656912502096-e1a24fb6-e60e-4eb2-b1b5-39873446938e.png#clientId=u6430b540-2302-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=527&id=TGvEi&margin=%5Bobject%20Object%5D&name=image.png&originHeight=527&originWidth=513&originalType=binary&ratio=1&rotation=0&showTitle=false&size=54565&status=done&style=none&taskId=ufa285f83-bc64-4d4b-9354-e78a53fbec7&title=&width=513)
+### 
+
+4. get(position)
+- 代码实现：
+```javascript
+DoublyLinkedList.prototype.get = pos => {
+  if(pos < 0 || pos > this.length) return null
+  let current = null
+  let index = 0
+  if((this.length / 2) > pos ){
+    current = this.head
+    while(index++ < pos){current = current.next}
+  }
+  else{
+    current = this.tail
+    index = this.length - 1
+    while(index-- > pos ){current = current.prev}
+  }
+  return current.data
+}
+```
+
+- 过程详解：
+
+定义两个变量current和index，按照之前的思路通过while循环遍历分别获取当前节点和对应的索引值index，直到找到需要获取的position位置后的一个节点，此时index = pos =x，然后return current.data即可。       <br />如果链表的节点数量很多时，这种查找方式效率不高，改进方法为：     <br />一定要通过this.length来获取链表的节点数否则就会报错。      <br />当this.length / 2 > position：从头（head）开始遍历；     <br />当this.length / 2 < position：从尾（tail）开始遍历；     
+
+- 测试代码：
+```javascript
+console.log(list.get(0))
+console.log(list.get(5))
+```
+
+- 测试结果：
+
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/25602002/1656913663914-99bf189d-07ce-418b-bca9-e6e1aefef35e.png#clientId=u6430b540-2302-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=51&id=LI62U&margin=%5Bobject%20Object%5D&name=image.png&originHeight=51&originWidth=155&originalType=binary&ratio=1&rotation=0&showTitle=false&size=974&status=done&style=none&taskId=uf75c9cbf-2628-4ee4-a203-37ef29cd257&title=&width=155)
+
+5. indexOf(element)
+- 代码实现：
+```javascript
+      DoublyLinkedList.prototype.indexOf = data => {
+        //1.定义变量
+        let current = this.head
+        let index = 0
+
+        //2.遍历链表，查找与data相同的节点
+        while(current){
+          if (current.data == data) {
+            return index
+          }
+          current = current.next
+          index += 1
+        }
+        return -1
+      } 
+
+```
+
+- 过程详解：
+
+以（current）作为条件，通过while循环遍历链表中的所有节点（停止条件为current = null）。在遍历每个节点时将current指向的当前节点的data和传入的data进行比较即可。  
+
+- 测试代码：
+```javascript
+console.log(list.indexOf('aaa'))
+console.log(list.indexOf('ccc'))
+```
+
+- 测试结果：
+
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/25602002/1656914021423-feb6689b-7343-4f5d-bc57-e077eda7fbb1.png#clientId=u6430b540-2302-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=49&id=KIXME&margin=%5Bobject%20Object%5D&name=image.png&originHeight=49&originWidth=67&originalType=binary&ratio=1&rotation=0&showTitle=false&size=481&status=done&style=none&taskId=u513e89fc-8916-4afd-87f3-6510e24b036&title=&width=67)
+
+6. update(position,element)
+- 代码实现：
+```javascript
+      DoublyLinkedList.prototype.update = (position, newData) => {
+        //1.越界判断
+        if (position < 0 || position >= this.length) {
+          return false
+        }
+
+        //2.寻找正确的节点
+        let current = this.head
+        let index = 0
+        //this.length / 2 > position:从头开始遍历
+        if (this.length / 2 > position) {
+          while(index++ < position){
+          current = current.next
+        }
+        //this.length / 2 =< position:从尾开始遍历
+        }else{
+          current = this.tail
+          index = this.length - 1
+          while (index -- > position) {
+            current = current.prev
+          }
+        }
+
+        //3.修改找到节点的data
+        current.data = newData
+        return true//表示成功修改
+      }
+```
+
+- 过程详解：
+
+以（index++ < position）为条件，通过while循环遍历链表中的节点（停止条件为index = position）。循环结束后，current指向需要修改的节点。
+
+- 测试代码：
+```javascript
+console.log(list.update(1, 'c'));
+console.log(list);
+```
+
+- 测试结果：
+
+![image.png](https://cdn.nlark.com/yuque/0/2022/png/25602002/1656914392477-9c82f068-b066-4e32-92ec-172051747aa7.png#clientId=u6430b540-2302-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=312&id=eZkfA&margin=%5Bobject%20Object%5D&name=image.png&originHeight=312&originWidth=483&originalType=binary&ratio=1&rotation=0&showTitle=false&size=26908&status=done&style=none&taskId=u47fe69aa-84ab-4b3e-89f6-c740a8a0d7f&title=&width=483)
+
+7. removeAt(position)
+
+代码实现：
+
+```javascript
+DoublyLinkedList.prototype.removeAt = (position) => {
+  if(position < 0 || position >= this.length) return false
+  let current = this.head
+  if(this.length === 1){
+    this.head = null
+    this.tail = null
+  }
+  else {
+    if(position === 0){
+      this.head.next.prev = null
+      this.head = this.head.next
+    }
+    else if(position === this.length - 1) {
+      let current = this.tail
+      this.tail.prev.next = null
+      this.tail = this.tail.prev
+    } 
+    else {
+      let index = 0
+      while(index++ < position){
+        current = current.next
+      }
+      current.next.prev = current.prev
+      current.prev.next = current.next
+    }
+  }
+  this.length -= 1
+  return current.data
+}
+```
+
+
+测试代码：
+```javascript
+console.log('removeAt(2)',list.removeAt(2))
+console.log('removeAt(2)',list);
+```
+
+测试结果：<br />![image.png](https://cdn.nlark.com/yuque/0/2022/png/25602002/1657067348904-87f52b69-310c-410f-8850-ef8a0760e4bb.png#clientId=u4eb2bbaf-a62f-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=452&id=j6DX0&margin=%5Bobject%20Object%5D&name=image.png&originHeight=678&originWidth=754&originalType=binary&ratio=1&rotation=0&showTitle=false&size=82718&status=done&style=none&taskId=u3ed4149f-77c6-4fdb-8c5b-b847f4f4017&title=&width=503)
+
+8. 其他方法
+
+其他方法包括：**remove(element) ,isEmpty() ,size() ,getHead() ,getTail() **
+
+代码实现：
+
+```javascript
+DoublyLinkedList.prototype.remove = (data) => {
+  let index = this.indexOf(data)
+  return this.removeAt(index)
+}
+DoublyLinkedList.prototype.isEmpty = () => {
+  return this.length === 0
+}
+DoublyLinkedList.prototype.size = () => {
+  return this.length
+}
+DoublyLinkedList.prototype.getHead = () => {
+  return this.head.data
+}
+DoublyLinkedList.prototype.getTail = () => {
+  return this.tail.data
+}
+```
+
+测试代码：
+
+```javascript
+console.log(list.remove('aaa'))
+console.log(list.isEmpty())
+console.log(list.size())
+console.log(list.getHead())
+console.log(list.getTail())
+```
+
+测试结果：<br />![image.png](https://cdn.nlark.com/yuque/0/2022/png/25602002/1657067484601-7e57c579-13a9-4578-a041-9b01c1333ad1.png#clientId=u4eb2bbaf-a62f-4&crop=0&crop=0&crop=1&crop=1&from=paste&height=612&id=OohHG&margin=%5Bobject%20Object%5D&name=image.png&originHeight=818&originWidth=883&originalType=binary&ratio=1&rotation=0&showTitle=false&size=106479&status=done&style=none&taskId=u2a924939-784f-402d-b4dd-4e78519eb81&title=&width=660.5)
+
+### 2.5.6 完整实现
+
+```javascript
+//封装双向链表类
+function DoublyLinkedList() {
+  //封装内部类，节点类
+  function Node(data) {
+    this.data = data
+    this.prev = null
+    this.next = null
+  }
+  //属性
+  this.head = null
+  this.tail = null
+  this.length = 0
+  DoublyLinkedList.prototype.append = data => {
+    let newNode = new Node(data)
+    if (this.length === 0) {
+      this.tail = newNode
+      this.head = newNode
+    }
+    else {
+      newNode.prev = this.tail
+      this.tail.next = newNode
+      this.tail = newNode
+    }
+    this.length += 1
+  }
+  //toString
+  DoublyLinkedList.prototype.toString = () => {
+    return this.backwardString()
+  }
+  //forwardString
+  DoublyLinkedList.prototype.forwardString = () => {
+    let current = this.tail
+    let resultString = ""
+    while (current) {
+      resultString += current.data + '--'
+      current = current.prev
+    }
+    return resultString
+  }
+  //backwordString
+  DoublyLinkedList.prototype.backwardString = () => {
+    let current = this.head
+    let resultString = ""
+    while (current) {
+      resultString += current.data + "--"
+      current = current.next
+    }
+    return resultString
+  }
+  DoublyLinkedList.prototype.insert = (pos, data) => {
+    if (pos < 0 || pos > this.length) return false
+    let newNode = new Node(data)
+    if (this.length === 0) {
+      this.head = newNode
+      this.tail = newNode
+    }
+    else {
+      if (pos == 0) {
+        this.head.prev = newNode
+        newNode.next = this.head
+        this.head = newNode
+      }
+      else if (pos == this.length) {
+        this.tail.next = newNode
+        newNode.prev = this.tail
+        this.tail = newNode
+      }
+      else {
+        let current = this.head
+        let index = 0
+        while (index++ < pos) {
+          previous = current
+          current = current.next
+        }
+        newNode.next = current
+        newNode.prev = current.prev
+        previous.next = newNode
+        current.prev = newNode
+      }
+    }
+    this.length += 1
+    return true
+  }
+  DoublyLinkedList.prototype.get = pos => {
+    if (pos < 0 || pos > this.length) return null
+    let current = null
+    let index = 0
+    if ((this.length / 2) > pos) {
+      current = this.head
+      while (index++ < pos) { current = current.next }
+    }
+    else {
+      current = this.tail
+      index = this.length - 1
+      while (index-- > pos) {
+        current = current.prev
+      }
+    }
+    return current.data
+  }
+  DoublyLinkedList.prototype.indexOf = data => {
+    //1.定义变量
+    let current = this.head
+    let index = 0
+
+    //2.遍历链表，查找与data相同的节点
+    while (current) {
+      if (current.data == data) {
+        return index
+      }
+      current = current.next
+      index += 1
+    }
+    return -1
+  }
+  DoublyLinkedList.prototype.update = (position, newData) => {
+    //1.越界判断
+    if (position < 0 || position >= this.length) {
+      return false
+    }
+
+    //2.寻找正确的节点
+    let current = this.head
+    let index = 0
+    //this.length / 2 > position:从头开始遍历
+    if (this.length / 2 > position) {
+      while (index++ < position) {
+        current = current.next
+      }
+      //this.length / 2 =< position:从尾开始遍历
+    } else {
+      current = this.tail
+      index = this.length - 1
+      while (index-- > position) {
+        current = current.prev
+      }
+    }
+
+    //3.修改找到节点的data
+    current.data = newData
+    return true//表示成功修改
+  }
+  DoublyLinkedList.prototype.removeAt = (position) => {
+    if (position < 0 || position >= this.length) return false
+    let current = this.head
+    if (this.length === 1) {
+      this.head = null
+      this.tail = null
+    }
+    else {
+      if (position === 0) {
+        this.head.next.prev = null
+        this.head = this.head.next
+      }
+      else if (position === this.length - 1) {
+        let current = this.tail
+        this.tail.prev.next = null
+        this.tail = this.tail.prev
+      }
+      else {
+        let index = 0
+        while (index++ < position) {
+          current = current.next
+        }
+        current.next.prev = current.prev
+        current.prev.next = current.next
+      }
+    }
+    this.length -= 1
+    return current.data
+  }
+  DoublyLinkedList.prototype.remove = (data) => {
+    let index = this.indexOf(data)
+    return this.removeAt(index)
+  }
+  DoublyLinkedList.prototype.isEmpty = () => {
+    return this.length === 0
+  }
+  DoublyLinkedList.prototype.size = () => {
+    return this.length
+  }
+  DoublyLinkedList.prototype.getHead = () => {
+    return this.head.data
+  }
+  DoublyLinkedList.prototype.getTail = () => {
+    return this.tail.data
+  }
+}
+let list = new DoublyLinkedList()
+list.append('aaa')
+list.append('bbb')
+list.append('ccc')
+console.log(list)
+console.log(list.toString())
+console.log(list.backwardString())
+console.log(list.forwardString())
+list.insert(0, '插入链表的第一个元素')
+list.insert(0, '在链表首部插入元素')
+list.insert(1, '在链表中间插入元素')
+list.insert(6, '在链表尾部插入元素')
+console.log(list);
+console.log(list.get(0))
+console.log(list.get(5))
+console.log(list.indexOf('aaa'))
+console.log(list.indexOf('ccc'))
+console.log(list.update(1, 'c'));
+console.log(list);
+console.log('removeAt(2)', list.removeAt(2))
+console.log('removeAt(2)', list);
+console.log('remove(aaa)', list.remove('aaa'))
+console.log('remove(aaa)', list);
+console.log('isEmpty()', list.isEmpty())
+console.log('size()', list.size())
+console.log('getHead()', list.getHead())
+console.log('getTail()', list.getTail())
+```
+
+## 2.6 链表结构总结
+
+ 单向链表有head和next两个属性，双向链表有head、tail、next、prev四个属性。处理好它们的指向，相当于将它们正确地连接在一起，这样就组成了一条链，这就是简单链表的实现。   
+
+在实际开发中链表使用得非常多，比如Java中的LinkList就是双向链表。   <br />    
+### 2.6.1 注意点
+
+- 在链表中**current = current.next **可以从左往右看，看成是**current --> current.next**，即current指向current的下一个节点。 
+- 删除节点的原理：只要没有引用指向该对象，无论该对象是否有引用指向其他对象，该对象都会被回收（删除）。
+- 参数中凡是有position的都要进行越界判断。
+
+
+### 2.6.2 链表的增删改查
+
+ 以双向链表为例：链表的增删改查无非就是获取链表中相应的节点改变其中的prev和next两个变量的指向。  
+
+- 情况一：只需要head和tail两个变量就可以获取需要操作的变量（这里指的是能够轻松获取，当然你想通过head.next.next...或tail.prev.prev...来获取想要的节点也可以），在这种情况下链表的长度**length：0 <= length <=2**。   
+- 情况二：不能靠tail和head来获取到需要操作的变量时，可采用**while循环遍历**的方式，找到需要操作的节点，在这种情况下，如果我们想要在链表的**position = x**的位置插入新节点，那么可以通过**current.next获取position的后一个节点Node(x+1)**，通过**current.prev获取position位置的前一个节点Node(x)**；之后修改**Node(x+1)和Node(x)中的prev和next**两个变量的指向即可在pos=x 的位置插入新节点。<br /> 
+
+### 2.6.3 修改链表引用指向
+
+ 应先修改newNode引用的指向，再修改其他引用
+
+- 情况1：通过head和tail引用就能获取需要操作的节点时，最后更改head或tail变量的指向（因为它们分别指向链表的第一个和最后一个节点，获取其他节点时可能需要用到它们）。
+- 情况2：使用current获取到需要操作的节点时，最后更改**curren.next**或**current.prev**的指向。因为**current.next和current.prev表示的是Node(x+2)和Node(x)这两个节点**，一旦变更它们的指向就无法获取Node(x)或Node(x+2)了，<br /> 
+
+### 2.6.4 遍历链表<br /> 
+积累两种遍历思路
+
+- 获取指定的**position = x 位置的后一个节点和索引值**：循环结束后**index = position = x**，变量current就指向了**Node(x+1)**，变量index的值为**Node(x+1)**的索引值x。
+- 遍历链表中的所有节点：当**current.next = null时停止循环**，此时current指向链表的最后一个节点。<br /> <br /> 
