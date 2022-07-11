@@ -1,4 +1,4 @@
-* DOCSIFY学习笔记
+* JS数据结构与算法笔记
   * [一、什么是数据结构？](js_study/js_study1.md)
   * [二、线性结构](js_study/js_study2.md)
   * [三、集合与字典](js_study/js_study3.md)
